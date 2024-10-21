@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- linking pyscript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>CC03 PROJECT - SIMPLE TO DO APP LIST</title>
+</head>
+
+<body>
+    <main>
+        <h1>Simple Stock Counting Web App</h1>
+        <div class="main-content">
+            <nav>
+                <ul class="list-items">
+                    <li class="list-item btn-bg-color" id="add-btn">Add Stocks</li>
+                    <li class="list-item" id="remove-btn">Remove Stock</li>
+                    <li class="list-item" id="view-btn">View Stocks</li>
+                    <li class="list-item" id="update-btn">Update Stock Counts</li>
+                </ul>
+            </nav>
+            <div class="content">
+                <form action="" class="add-form" id="add-form">
+                    <div class="input-container">
+                        <label for="">Item Name</label>
+                        <input type="text" placeholder="Enter Item Name" id="item-name" class="input">
+                    </div>
+                    <div class="input-container">
+                        <label for="">Quantity</label>
+                        <input type="text" placeholder="Enter Quantity" id="item-quantity" class="input">
+                    </div>
+                    <div class="btn-container">
+
+                        <p id="add-stock-btn" class="btn">Add</p>
+                    </div>
+                </form>
+                <form action="" class="remove-form display-none" id="remove-form">
+                    <div class="input-container">
+                        <label for="">Item Name</label>
+                        <input type="text" placeholder="Enter Item Name" id="remove-item-name" class="input">
+                    </div>
+                    <div class="btn-container">
+
+                        <p id="remove-stock-btn" class="btn">Remove</p>
+
+                    </div>
+                </form>
+                <form action="" class="update-form display-none" id="update-form">
+                    <div class="input-container">
+                        <label for="">Item Name</label>
+                        <input type="text" placeholder="Enter Item Name" id="update-item-name" class="input">
+                    </div>
+                    <div class="input-container">
+                        <label for="">Quantity</label>
+                        <input type="text" placeholder="Enter Quantity" id="update-item-quantity" class="input">
+                    </div>
+                    <div class="btn-container">
+
+                        <p id="update-stock-btn" class="btn">Update</p>
+                    </div>
+                </form>
+                <div class="view-inventory display-none" id="view-inventory">
+
+                    <div id="inventory-display">
+                        <!-- Inventory items will be displayed here -->
+                    </div>
+
+                </div>
+                <div class="message">
+                    <p class="message" id="message_el"></p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <py-script src="main.py">
+    </py-script>
+    <script src="index.js"></script>
+</body>
+
+
+</html>
