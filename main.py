@@ -13,8 +13,9 @@ class StockCounter:
             def add_stock(self, item_name, quantity):
             # Add new stock or update existing stock
                 #__update the quantity in the list if exist.
-                if item_name in self.inventory.keys():
+                if item_name in self.inventory:
                     self.inventory[item_name] += quantity
+                    message.write(f"{quantity} units added to {item_name} in the inventory.")
                 #__add new list if not exisit.
                 else:
                     self.inventory[item_name] = quantity
@@ -49,6 +50,7 @@ view_inventory_button = Element('view-btn')
 add_menu_btn = Element('add-btn')
 remove_menu_btn = Element('remove-btn')
 update_menu_btn = Element('update-btn')
+cancel_btn = Element('cancel-btn')
 
 
 
@@ -132,4 +134,3 @@ view_inventory_button.element.onclick = on_view_inventory
 add_menu_btn.element.onclick = clear_message
 remove_menu_btn.element.onclick = clear_message
 update_menu_btn.element.onclick = clear_message
-# view_inventory_button.element.onclick = clear_message
