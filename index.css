@@ -190,3 +190,33 @@
             color: #555;
             font-size: 1.4rem;
         }
+/* Mobile devices */
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 58%;
+    }
+    body {
+        margin-top: 1rem;
+
+    }
+    main {
+        max-width: 100%;
+        min-width: 100%;
+        padding: 1rem;
+        margin: 0 auto 0 auto;
+        min-height: 100vh;
+        border: none;
+    }
+    .list-items {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .list-item {
+        margin-bottom: 1.2rem;
+        /* margin: 0 auto; */
+    }
+  }
