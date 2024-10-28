@@ -19,7 +19,7 @@ class StockCounter:
     def load_inventory(self):
         # datas store in localstorage
         data = js.localStorage.getItem(self.STORAGE_KEY)
-        print(data)
+        # print(data)
         if data:
             try:
                 return json.loads(data)  # Convert JSON string back to dictionary
