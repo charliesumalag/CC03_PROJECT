@@ -6,7 +6,7 @@ message = Element('message_el')
 
 # _____________________CREATING A CLASS: STOCKCOUNTER_______________________________________
 class StockCounter:
-    # declaare a local storage key name
+    # Key for localStorage
     STORAGE_KEY = "inventory_data"
 
 
@@ -19,7 +19,15 @@ class StockCounter:
     def load_inventory(self):
         # datas store in localstorage
         data = js.localStorage.getItem(self.STORAGE_KEY)
-        return json.loads(data) #return a json text file format
+        print(data)
+        if data:
+            try:
+                return json.loads(data)  # Convert JSON string back to dictionary
+            except json.JSONDecodeError:
+                message.write("Failed to load inventory data from localStorage. Data may be corrupted.")
+                js.localStorage.removeItem(self.STORAGE_KEY)  # Clear corrupted data
+        return {}  # Return empty inventory if no valid data exists
+
     # _______________SAVE INVENTORY METHOD___________________
     def save_inventory(self):
         # Save the inventory dictionary as a JSON string in localStorage
