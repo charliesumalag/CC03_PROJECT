@@ -24,7 +24,6 @@ class StockCounter:
             try:
                 return json.loads(data)  # Convert JSON string back to dictionary
             except json.JSONDecodeError:
-                message.write("Failed to load inventory data from localStorage. Data may be corrupted.")
                 js.localStorage.removeItem(self.STORAGE_KEY)  # Clear corrupted data
         return {}  # Return empty inventory if no valid data exists
 
