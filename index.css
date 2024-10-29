@@ -140,6 +140,7 @@
             font-weight: 400;
             font-size: 1.4rem;
             color: #999;
+            border-spacing: 3px;
         }
         th{
             /* border: 1px solid #999; */
